@@ -6,7 +6,6 @@ import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
   site: 'https://impossible1770.github.io',
-  base: '/alexhrindii.github.io',
   integrations: [
       mdx(),
       astroI18next(),

@@ -9,8 +9,8 @@ i18next.changeLanguage("en");
 const posts = (await getCollection('blog'))
     .filter((entry) => entry.slug.startsWith("en"))
     .sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+        (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+    );
 
 const last_posts = posts.slice(0, 3);
 ---
@@ -43,7 +43,7 @@ const last_posts = posts.slice(0, 3);
             <span>
                 <a class="btn" style="background-color: #0077b5" target="_blank"
                    href="https://www.linkedin.com/in/alexander-h-667533193/"><img alt="linkedin"
-                                                                        src="/linkedin.svg"/></a>
+                                                                                  src="/linkedin.svg"/></a>
             </span>
             <span>
                 <a class="btn" href="https://medium.com/@alex.hrindii"><img alt="medium" src="/medium.svg"/></a>
@@ -58,16 +58,14 @@ const last_posts = posts.slice(0, 3);
 
     {
         last_posts.map((post) => (
-                <a href={post.data.sourceUrl} target="_blank">
-                    <HorizontalCard
-                            title={post.data.title}
-                            img={post.data.heroImage}
-                            desc={post.data.description}
-                            url={post.data.sourceUrl}
-                            target="_blank"
-                    />
-                    <div className="divider my-0"></div>
-                </a>
+                <HorizontalCard
+                        title={post.data.title}
+                        img={post.data.heroImage}
+                        desc={post.data.description}
+                        url={post.data.sourceUrl}
+                        target="_blank"
+                />
+                <div className="divider my-0"></div>
         ))
     }
 

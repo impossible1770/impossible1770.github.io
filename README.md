@@ -5,18 +5,6 @@
     <img src="public/android.png" style="vertical-align: middle;" width="32"/>
 </div>
 
-
-<style>
-  .rounded-image {
-    border-radius: 50%;
-    overflow: hidden;
-  }
-
-  .rounded-image img {
-    width: 50%; 
-  }
-</style>
-
 <p align="center" class="rounded-image">
   <img src="https://media.licdn.com/dms/image/C4E03AQG1NzVBk7mL2g/profile-displayphoto-shrink_800_800/0/1660169073293?e=1708560000&v=beta&t=KyUMIZHFomrIpV6pvuvtYzfjwhrXx4Kq3MCsaKZQgg0&style=plastic" alt="7oSkaaa" />
 </p>

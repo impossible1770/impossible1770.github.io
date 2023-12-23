@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-  site: 'https://ilyapavlovskii.github.io',
+  site: 'https://alexhrindii.github.io',
   integrations: [
       mdx(),
       astroI18next(),

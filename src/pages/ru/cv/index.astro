@@ -1,0 +1,156 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import TimeLineElement from "../../../components/cv/TimeLine.astro";
+import i18next from "i18next";
+
+i18next.changeLanguage("ru");
+---
+
+<BaseLayout title="Resume">
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">Резюме</div>
+    </div>
+
+    <div class="mb-10 text-justify">
+        Здравствуйте! Я Илья - Android инженер с 10-летним опытом в области разработки.
+        За это время я успешно завершил более 20 проектов, принимал активное участие в
+        <a style="color: rgb(0,0,255)" href="https://github.com/IlyaPavlovskiy">open source</a> и делал свой
+        вклад в сообщество через написание статей на популярных платформах,
+        таких как <a style="color:rgb(0,0,255)" href="https://habr.com/ru/users/TranE91/">хабр</a> и
+        <a style="color: rgb(0,0,255)" href="https://pavlovskiyilia.medium.com/">Medium</a>.
+        </br>
+        Мои знания включают в себя архитектуру Android, мобильной разработки, шаблоны проектирования, процессы
+        разработки и мобильные системы развертывания (CI/CD). Моя специализация - разработка продуктов.
+        Кроме того, я увлечен бизнесом, финансами, психологией и активно отслеживаю последние технические
+        тенденции и новости в мобильной архитектуре и передовых мобильных технологиях.
+    </div>
+
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">Образование</div>
+    </div>
+
+    <div class="time-line-container grid gap-4 mb-10">
+        <TimeLineElement
+                title="Бакалавр, Компьютерные системы и сети"
+                subtitle="2009-2014, Беларуский Государственный университет информатики и радиоэлектроники, Минск, Беларусь"
+        />
+    </div>
+
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">Опыт</div>
+    </div>
+
+    <div class="time-line-container mb-10">
+        <TimeLineElement
+                title="Android инженер"
+                subtitle="Июль 2022 - по настоящее время, Elinext, Варшава, Польша"
+                companyLink="https://www.elinext.com/"
+                desc="Arlo Secure: Home Security. Система охраны дома с набором сенсоров и интерфейсов для коммуникации с пользователем для повышения безопасности дома. В зону моей ответсвенности входит - улучшение технического процесса(поддержка CI, улучшение процесса ревью, ускорение процесса CD, техническая консультация), улучшение технического стека(введение линтеров и полный переезд на Kotlin, строгие архитектурные правила), добавление функциональности и улучшение старых узлов(уменьшение стоимости аренды за счет кэширования и переиспользования калькулируеммых данных)."
+        />
+        <TimeLineElement
+                title="Android инженер"
+                subtitle="Январь 2020 - Июль 2022, Humans Group, Варшава, Польша"
+                companyLink="https://play.google.com/store/apps/details?id=net.humans.fintech_uz"
+                desc="Humans.uz is - телеком-банкинг-маркетплейс платформа для Узбекистана(а-ля Тинькофф). Технический и ресурсный менеджмент. Ускорение доставки функциональности до конечного пользователя: настройка декомпозиции и выстраивание процесса дробления разработки при создании новых фич(в среднем 2-4 человека на функциональность); уменьшение времени сборки - дробление неделимых компонентов в модули их бинаризация с доставкой через пакетный регистр. Как результат - сокращение доставки функциональности пользователю с 2х месяцев до 3 недель. Основное достижение - ускорение разработки при большом штате сотрудников без потери эффективности."
+        />
+        <TimeLineElement
+                title="Android инженер"
+                subtitle="Июнь 2019 - Январь 2020, HiQo Solutions, Минск, Беларусь"
+                companyLink="https://hiqo-solutions.com/"
+                desc="HiQo Solutions - аутсорсинг компания специализирующаяся на IoT системах, машинном обучении и облачных сервисах. В зону моей ответственности входило ведение проектов и менторство андроид инженеров. Поддержка качества культуры кода, введение системы CI/CD и улучшение технических процессов."
+        />
+        <TimeLineElement
+                title="Android инженер"
+                subtitle="Июнь 2018 - Июль 2019, Yandex, Минск, Беларусь"
+                companyLink="https://yandex.com/company/"
+                desc="Yandex Browser - мобильный форк браузера Chromium. Отдел AndroidUI - поддеркжа и аггрегирование сервисов Яндекс в одном приложении. За время работы довелось принять участие в следующих квотах: багфикс, разработка и поддержка новых фич и отдел автоматизированного тестирования. Улучшение процесса миграции команды с Java на Kotlin за счет введения синтаксических анализаторов."
+        />
+        <TimeLineElement
+                title="Android инженер"
+                subtitle="Июнь 2015 - Июнь 2018, Yellow, Минск, Беларусь"
+                companyLink="https://yellow.systems/"
+                desc="Yellow - молодая и быстрорастущая компания-студия. За время работы в компании в основном фокусировался на разработке собственных проектов, с периодическим переключением на проекты на заказ."
+        />
+        <TimeLineElement
+                title="Android инженер"
+                subtitle="Октябрь 2014 - Июнь 2015, ITM House, Минск, Беларусь"
+                companyLink="https://www.linkedin.com/company/itm-house/"
+                desc="ITM House - большая аутсорсинговая компания с молодым коллективом. Я был счастлив стать частью этого коллектива, ведь мне была дана возможность начать проект, который в итоге и стал начал новой компании - Yellow. А проект этот назывался FlowerPower."
+        />
+        <TimeLineElement
+                title="Middle Android Developer"
+                subtitle="Февраль 2014 - Сентябрь 2014, Vega Systems, Минск, Беларусь"
+                desc="Vega Systems - небольшая компания специализирующаяся на маленьких мобильных проектах. В результате чего, мы смогли выпустить порядка 7 мобильных проектов и пополнили рынок решений для бизнеса Беларуси и России."
+        />
+        <TimeLineElement
+                title="Junior Android Developer"
+                subtitle="Ноябрь 2012 - Февраль 2014, Medical Software Solutions, Минск, Беларусь"
+                desc="Medical Software Solutions - компания специализировалась на разработке и продаже POS медицинских продуктов. Это была моя первая работа, где я смог приложить все свои знания и усилия на практике."
+        />
+    </div>
+
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">Сертификаты</div>
+    </div>
+
+    <ul class="list-disc mx-6 mb-10 grid gap-2">
+        <li>
+            <a href="/cv/elegion-android.pdf" target="_blank">E-legion & Google. Android Developer school. 2015</a>
+        </li>
+        <li>CCNA Exploration: Network Fundamentals</li>
+        <li>CCNA Exploration: Routing Protocols and Concept</li>
+    </ul>
+
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">События</div>
+    </div>
+
+    <div class="time-line-container mb-10">
+        <TimeLineElement
+                title="Контурные карты Беларуси для школы"
+                subtitle="Август 2019, Engineering Jam 3, Минск, Беларусь"
+                companyLink="https://tech.onliner.by/2019/08/17/jam-2#utm_source=facebook&utm_medium=onliner&utm_campaign=Engineering_Jam_3&utm_term=1st_day&utm_content=article?fbclid=IwAR2wsdgRVEHrHY0cLG6bC7GyyQQUc6dM-E97gFXN0X65o6YSLhtLzLyC8VI"
+                desc="Приложение, которое могло помочь учителям давать ученикам задания в форме квизов по контурным картам Беларуси. Участие, без призовых мест."
+        />
+        <TimeLineElement
+                title="Stickerbox"
+                subtitle="Август 2016, Skywind Hackaton, Минск, Беларусь"
+                companyLink="https://www.youtube.com/channel/UCm2fb0ZmA5Hs1FWCEhnx23w"
+                desc="“Stickerbox” - приложение, которое помогало быстро создать развлекательные стикеры и переслать кому-угодно с помощью клавиатуры. Награды: “Законченный MVP”;  “Драйвовое и веселое приложение”; “Главный приз”"
+        />
+    </div>
+
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">Навыки</div>
+    </div>
+
+    <ul class="list-disc md:columns-5 columns-2 mx-6">
+        <li>Russian (Native)</li>
+        <li>English (C1)</li>
+        <li>Polish (B1)</li>
+        <li>Android</li>
+        <li>Java</li>
+        <li>Kotlin</li>
+        <li>Kotlin KMM</li>
+        <li>Groovy</li>
+        <li>Gradle</li>
+        <li>Bash</li>
+        <li>C++</li>
+        <li>Python</li>
+        <li>PHP</li>
+        <li>Ruby</li>
+        <li>Ruby on Rails</li>
+        <li>SQLite</li>
+        <li>Postgres SQL</li>
+        <li>MySQL</li>
+        <li>GraphQL</li>
+        <li>REST</li>
+        <li>Astro</li>
+        <li>Bootstrap</li>
+        <li>Git</li>
+        <li>Jira</li>
+        <li>LeanStartup</li>
+        <li>UX/UI Design</li>
+        <li>Figma</li>
+    </ul>
+</BaseLayout>

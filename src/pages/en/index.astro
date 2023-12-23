@@ -1,0 +1,82 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HorizontalCard from "../../components/HorizontalCard.astro";
+import {getCollection} from "astro:content";
+import i18next from "i18next";
+
+i18next.changeLanguage("en");
+
+const posts = (await getCollection('blog'))
+    .filter((entry) => entry.slug.startsWith("en"))
+    .sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const last_posts = posts.slice(0, 3);
+---
+<BaseLayout>
+
+    <div class="pb-12 mt-5">
+        <div class="text-xl py-1">Hey there 👋</div>
+        <div class="text-5xl font-bold">I'm Ilia Pavlovskii</div>
+        <div class="text-3xl py-3 font-bold">Android Software Engineer</div>
+        <div class="py-2">
+            <text class="text-lg">
+                Hello, I'm Ilia, an experienced Android Engineer with a decade of expertise in the field.
+                Over the course of my career, I have successfully delivered more than 20 projects,
+                actively contributed to <a style="color: rgb(0,0,255)" href="https://github.com/IlyaPavlovskii">open-source
+                initiatives</a>,
+                and shared my knowledge through tech writing on
+                platforms like <a style="color: rgb(0,0,255)" href="https://habr.com/ru/users/TranE91/">Habr</a> and
+                <a style="color: rgb(0,0,255)" href="https://pavlovskiiilia.medium.com/">Medium</a>. Additionally,
+                I have been an active participant in Q&A sessions.
+                My areas of expertise encompass Android architecture, design patterns, and mobile CI/CD.
+                I specialize in product development, with a keen interest in business, finance, psychology,
+                and staying up-to-date with the latest advancements in mobile architecture and trending technologies.
+            </text>
+        </div>
+
+        <div class="mt-8">
+            <span>
+                <a class="btn" target="_blank" href="https://github.com/IlyaPavlovskii/"><img alt="github"
+                                                                                              src="/github.svg"/></a>
+            </span>
+            <span>
+                <a class="btn" style="background-color: #0077b5" target="_blank"
+                   href="https://www.linkedin.com/in/ipavlovskii/"><img alt="linkedin"
+                                                                        src="/linkedin.svg"/></a>
+            </span>
+            <span>
+                <a class="btn" style="background-color: #7598a6" href="https://habr.com/ru/users/TranE91/posts/"><img
+                        alt="habr" src="/habr.svg"/></a>
+            </span>
+            <span>
+                <a class="btn" href="https://pavlovskiiilia.medium.com/"><img alt="medium" src="/medium.svg"/></a>
+            </span>
+
+            <span>
+                <a class="btn" style="background-color: #ffdd00" href="https://www.buymeacoffee.com/ipavlovskii"><img
+                        alt="medium" src="/buy_me_a_coffee.svg"/></a>
+            </span>
+
+        </div>
+    </div>
+
+    <div>
+        <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+    </div>
+
+    {
+        last_posts.map((post) => (
+                <HorizontalCard
+                        title={post.data.title}
+                        img={post.data.heroImage}
+                        desc={post.data.description}
+                        url={"/en/blog/" + post.slug.slice(3)}
+                        target="_self"
+                />
+                <div class="divider my-0"></div>
+        ))
+    }
+
+</BaseLayout>

@@ -1,0 +1,80 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HorizontalCard from "../../components/HorizontalCard.astro";
+import {getCollection} from "astro:content";
+import i18next from "i18next";
+
+i18next.changeLanguage("ru");
+
+const posts = (await getCollection('blog'))
+    .filter((entry) => entry.slug.startsWith("ru"))
+    .sort(
+        (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+    );
+
+const last_posts = posts.slice(0, 3);
+---
+<BaseLayout>
+
+    <div class="pb-12 mt-5">
+        <div class="text-xl py-1">Всем привет 👋</div>
+        <div class="text-5xl font-bold">Меня зовут Илья!</div>
+        <div class="text-3xl py-3 font-bold">Android инженер</div>
+        <div class="py-2">
+            <text class="text-lg">
+                Здравствуйте! Я Илья - Android-инженер с 10-летним опытом в области разработки.
+                За это время я успешно завершил более 20 проектов, принимал активное участие в
+                <a style="color: rgb(0,0,255)" href="https://github.com/IlyaPavlovskiy">open source</a> и делал свой
+                вклад в сообщество через написание статей на популярных платформах,
+                таких как <a style="color:rgb(0,0,255)" href="https://habr.com/ru/users/TranE91/">хабр</a> и
+                <a style="color: rgb(0,0,255)" href="https://pavlovskiyilia.medium.com/">Medium</a>.
+                Мои знания включают в себя архитектуру Android, мобильной разработки, шаблоны проектирования, процессы
+                разработки и мобильные системы развертывания (CI/CD). Моя специализация - разработка продуктов.
+                Кроме того, я увлечен бизнесом, финансами, психологией и активно отслеживаю последние технические
+                тенденции и новости в мобильной архитектуре и передовых мобильных технологиях.
+            </text>
+        </div>
+        <div class="mt-8">
+            <span>
+                <a class="btn" target="_blank" href="https://github.com/IlyaPavlovskii/"><img alt="github"
+                                                                                              src="/github.svg"/></a>
+            </span>
+            <span>
+                <a class="btn" style="background-color: #0077b5" target="_blank"
+                   href="https://www.linkedin.com/in/ipavlovskii/"><img alt="linkedin"
+                                                                        src="/linkedin.svg"/></a>
+            </span>
+            <span>
+                <a class="btn" style="background-color: #7598a6" href="https://habr.com/ru/users/TranE91/posts/"><img
+                        alt="habr" src="/habr.svg"/></a>
+            </span>
+            <span>
+                <a class="btn" href="https://pavlovskiiilia.medium.com/"><img alt="medium" src="/medium.svg"/></a>
+            </span>
+
+            <span>
+                <a class="btn" style="background-color: #ffdd00" href="https://www.buymeacoffee.com/ipavlovskii"><img
+                        alt="medium" src="/buy_me_a_coffee.svg"/></a>
+            </span>
+
+        </div>
+    </div>
+
+    <div>
+        <div class="text-3xl w-full font-bold mb-5 mt-10">Последнее из блога</div>
+    </div>
+
+    {
+        last_posts.map((post) => (
+                <HorizontalCard
+                        title={post.data.title}
+                        img={post.data.heroImage}
+                        desc={post.data.description}
+                        url={"/ru/blog/" + post.slug.slice(3)}
+                        target="_self"
+                />
+                <div class="divider my-0"></div>
+        ))
+    }
+
+</BaseLayout>

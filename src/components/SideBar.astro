@@ -1,0 +1,145 @@
+---
+import i18next, {t} from "i18next";
+import {Trans, HeadHrefLangs} from "astro-i18next/components";
+---
+<div class="drawer-side bg-base-200" lang={i18next.language}>
+    <label for="my-drawer" class="drawer-overlay bg-base-200"></label>
+    <div class="menu flex flex-col flex-nowrap p-4 overflow-y-auto w-[21rem] bg-base-200 text-base-content">
+        <div class="w-fit">
+            <a href="/">
+                <div class="avatar transition ease-in-out w-1/2 hover:scale-[102%] block m-auto mt-3 mb-6">
+                    <div>
+                        <img class="mask mask-circle" src="/profile.png" alt="profile image"/>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <ul class="grow shrink">
+            <!-- Sidebar content here -->
+            <li><a id="home" href="/">{t("side_bar.home")}</a></li>
+            <li><a id="blog" href="/blog/">{t("side_bar.blog")}</a></li>
+            <li><a id="projects" href="/projects/">{t("side_bar.projects")}</a></li>
+            <li><a id="cv" href="/cv">{t("side_bar.cv")}</a></li>
+            <li><a href="mailto:pavlovskii.ilya@gmail.com">{t("side_bar.contact")}</a></li>
+        </ul>
+        <div class="social-icons px-4 my-2 flex self-center">
+            <a
+                    href="https://www.buymeacoffee.com/ipavlovskii"
+                    target="_blank"
+                    class="mx-3"
+                    aria-label="Support my work"
+                    title="Support my work"
+            >
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        style="fill: currentColor;transform: ;msFilter:;"
+                >
+                    <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M5 2h2v3H5zm4 0h2v3H9zm4 0h2v3h-2zm6 7h-2V7H3v11c0 1.654 1.346 3 3 3h8c1.654 0 3-1.346 3-3h2c1.103 0 2-.897 2-2v-5c0-1.103-.897-2-2-2zm-4 9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V9h10v9zm2-2v-5h2l.002 5H17z"
+                    ></path>
+                </svg
+                >
+            </a>
+            <a href="https://github.com/IlyaPavlovskii/" target="_blank" class="mx-3" aria-label="Github"
+               title="Github">
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        style="fill: currentColor;transform: ;msFilter:;"
+                >
+                    <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"
+                    ></path>
+                </svg>
+            </a>
+            <a
+                    href="https://www.linkedin.com/in/ipavlovskii"
+                    target="_blank"
+                    class="mx-3"
+                    aria-label="Linkedin"
+                    title="Linkedin"
+            >
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        style="fill: currentColor;transform: ;msFilter:;"
+                >
+                    <circle cx="4.983" cy="5.009" r="2.188"></circle>
+                    <path
+                            d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zm-6.142 0H6.87v12.139H3.095z"
+                    ></path>
+                </svg>
+            </a>
+
+            <a
+                    href="https://pavlovskiiilia.medium.com/"
+                    target="_blank"
+                    class="mx-3"
+                    aria-label="Linkedin"
+                    title="Linkedin"
+            >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.76884 5.15625C10.5072 5.15625 13.5374 8.20768 13.5374 11.9715C13.5374 15.7354 10.5069 18.7866 6.76884 18.7866C3.03073 18.7866 0 15.7354 0 11.9715C0 8.20768 3.0305 5.15625 6.76884 5.15625ZM17.5782 5.55547C19.4474 5.55547 20.9626 8.42775 20.9626 11.9715H20.9628C20.9628 15.5144 19.4476 18.3876 17.5784 18.3876C15.7092 18.3876 14.194 15.5144 14.194 11.9715C14.194 8.42867 15.709 5.55547 17.5782 5.55547ZM22.8097 6.22375C23.4669 6.22375 24 8.79708 24 11.9715C24 15.1451 23.4672 17.7193 22.8097 17.7193C22.1522 17.7193 21.6196 15.1458 21.6196 11.9715C21.6196 8.79731 22.1524 6.22375 22.8097 6.22375Z"
+                          fill="black"/>
+                </svg>
+            </a>
+
+            <a
+                    href="https://habr.com/ru/users/TranE91/posts/"
+                    target="_blank"
+                    class="mx-3"
+                    aria-label="Linkedin"
+                    title="Linkedin"
+            >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_130_7765)">
+                        <path d="M0 0V24H24V0H0ZM7.02375 3.99975H8.6565C9.879 3.99975 10.2975 4.02675 10.3245 4.113C10.344 4.17975 10.356 5.48025 10.356 7.01175L10.3485 9.79275L10.821 9.3705C11.481 8.7885 12.036 8.58525 13.0867 8.54625C13.7782 8.52675 14.0595 8.55375 14.544 8.72625C15.6068 9.08175 16.3567 9.81225 16.7475 10.89C16.8997 11.3123 16.9193 11.7532 16.947 15.1755L16.9785 18.9998H13.6387V15.879C13.6387 12.8048 13.6313 12.7657 13.4243 12.3907C13.131 11.895 12.8145 11.6677 12.315 11.6137C11.4638 11.52 10.8735 11.8088 10.5375 12.5048C10.377 12.825 10.3575 13.161 10.35 15.8602C10.338 17.5087 10.3185 18.8918 10.3185 18.927C10.311 18.9743 9.5685 19.0012 8.66625 19.0012H7.02975V11.5013L7.02375 3.99975Z"
+                              fill="black"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_130_7765">
+                            <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+
+            </a>
+
+        </div>
+    </div>
+</div>
+<script>
+    const homeLink = document.getElementById("home");
+    const projectsLink = document.getElementById("projects");
+    const servicesLink = document.getElementById("services");
+    const storeLink = document.getElementById("store");
+    const blogLink = document.getElementById("blog");
+    const cvLink = document.getElementById("cv");
+
+    var isHome = true;
+
+    const url = window.location.href;
+
+    const pages = [projectsLink, servicesLink, storeLink, blogLink, cvLink];
+
+    pages.forEach((elem) => {
+        if (url.includes(elem.id)) {
+            isHome = false;
+            elem.classList.add("bg-base-300");
+        }
+    });
+    if (isHome) {
+        homeLink.classList.add("bg-base-300");
+    }
+</script>

@@ -1,0 +1,9 @@
+{
+  "side_bar": {
+    "home": "Home",
+    "blog": "Blog",
+    "projects": "Projects",
+    "cv": "CV",
+    "contact": "Contact"
+  }
+}

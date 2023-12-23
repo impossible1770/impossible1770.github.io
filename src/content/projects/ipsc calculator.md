@@ -1,0 +1,6 @@
+---
+title: "IPSC Hit Factor Calculator"
+description: "IPSC Hit Factor Calculator is a powerful tool for competitive shooters. It helps them measure their shooting time and calculate their IPSC hit factor during a match. The app features a timer that starts and stops as the shooter moves through the stages, accurately measuring their shooting time. The user can then enter the number of hits and misses for each stage, and the app calculates the IPSC hit factor based on the shooting time and accuracy. The app also provides a detailed history of the user's hit factor, allowing them to track their performance over time. It supports different IPSC divisions, and the user can choose the division they are competing in. The interface of the app is clean and user-friendly, making it easy for the shooter to enter their hits and misses, and see their hit factor. The app also provides clear instructions on how to calculate the IPSC hit factor, making it a valuable tool for both experienced shooters and those who are new to the sport. In conclusion, the IPSC Hit Factor Calculator is a comprehensive tool for competitive shooters who want to improve their performance and stay on top of their game."
+image: "/ipsc.png"
+link: "https://play.google.com/store/apps/details?id=by.bulba.ipsc.calculator"
+---

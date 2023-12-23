@@ -1,4 +1,4 @@
-<h1 align="center">Hi there, I'm Ilia Pavlovskii</h1>
+<h1 align="center">Hi there, I'm Alex Hrindii</h1>
 <div align="center">
     <img src="public/android.png" style="vertical-align: middle;" width="32"/>
     <span style="vertical-align: middle; font-size: x-large;">Android Engineer</span>
@@ -6,35 +6,32 @@
 </div>
 
 
-<p align="center"> 
-	<img src="https://komarev.com/ghpvc/?username=IlyaPavlovskii&label=Profile%20views&color=0e75b6&style=plastic" alt="7oSkaaa" />
+<style>
+  .rounded-image {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .rounded-image img {
+    width: 50%; 
+  }
+</style>
+
+<p align="center" class="rounded-image">
+  <img src="https://media.licdn.com/dms/image/C4E03AQG1NzVBk7mL2g/profile-displayphoto-shrink_800_800/0/1660169073293?e=1708560000&v=beta&t=KyUMIZHFomrIpV6pvuvtYzfjwhrXx4Kq3MCsaKZQgg0&style=plastic" alt="7oSkaaa" />
 </p>
 
 ## About me
-- I'm a `Android Engineer` with 10 years experience  
-- I have Bachelor computer science degree (<a href="https://www.bsuir.by/en/">BSUIR</a>)
-- I have worked in many companies(outsourcing, freelance, startup and big corporate)
-- Here is my [CV](/public/CV_Ilia_Pavlovskii.pdf)
+- I'm a `Android Engineer` with 6 years experience  
+- I have a Bachelor's degree in CYBERSECURITY (<a href="https://nure.ua/en/applicants/specialties-and-specialization/cybersecurity/">NURE</a>)
+- I have worked in many companies(outsourcing, Outstaffing freelance, startup and big corporate)
+- Here is my [CV](/public/TODO.pdf)
 
 ### Social networks
-[![github](public/github.svg)](https://github.com/IlyaPavlovskii/)
-[![linkedin](public/linkedin.svg)](https://www.linkedin.com/in/ipavlovskii/)
+[![github](public/github.svg)](https://github.com/impossible1770)
+[![linkedin](public/linkedin.svg)](https://www.linkedin.com/in/alexander-h-667533193/)
 
 ### Blogs
 Here you might find some topics on a popular platforms
 
-[![medium](public/medium.svg)](https://pavlovskiiilia.medium.com/)
-[![habr](public/habr.svg)](https://habr.com/ru/users/TranE91/posts/)
-
-### Donate
-By links you might support my work and increase motivation to devote more time to it
-
-[!["PayPal"](public/paypal.svg)](https://www.paypal.com/paypalme/ipavlovskii)
-[!["Buy Me A Coffee"](public/buy_me_a_coffee.svg)](https://www.buymeacoffee.com/ipavlovskii)
-
-<h1>
-    <a href="">
-        <img align="" height='130px' src="https://github-readme-stats.vercel.app/api?username=IlyaPavlovskii&hide_title=true&show_icons=true&include_all_commits=true&line_height=21&bg_color=0,EC6C6C,FFD479,FFFC79,73FA79&theme=graywhite" />
-    </a>
-</h1>
-
+[![medium](public/medium.svg)](https://medium.com/@alex.hrindii/)

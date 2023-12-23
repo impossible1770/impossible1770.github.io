@@ -58,14 +58,14 @@ const last_posts = posts.slice(0, 3);
 
     {
         last_posts.map((post) => (
-                <HorizontalCard
-                        title={post.data.title}
-                        img={post.data.heroImage}
-                        desc={post.data.description}
-                        url={post.data.sourceUrl}
-                        target="_self"
-                />
-                <div class="divider my-0"></div>
+                <a href={post.data.sourceUrl} target="_self">
+                    <HorizontalCard
+                            title={post.data.title}
+                            img={post.data.heroImage}
+                            desc={post.data.description}
+                    />
+                    <div className="divider my-0"></div>
+                </a>
         ))
     }
 

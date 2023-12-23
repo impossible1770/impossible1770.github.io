@@ -6,7 +6,7 @@
 </div>
 
 <p align="center" class="rounded-image">
-  <img src="https://media.licdn.com/dms/image/C4E03AQG1NzVBk7mL2g/profile-displayphoto-shrink_800_800/0/1660169073293?e=1708560000&v=beta&t=KyUMIZHFomrIpV6pvuvtYzfjwhrXx4Kq3MCsaKZQgg0&style=plastic" alt="7oSkaaa" />
+  <img src="https://media.licdn.com/dms/image/C4E03AQG1NzVBk7mL2g/profile-displayphoto-shrink_800_800/0/1660169073293?e=1708560000&v=beta&t=KyUMIZHFomrIpV6pvuvtYzfjwhrXx4Kq3MCsaKZQgg0&style=plastic" alt="7oSkaaa" style="width: 50%;" />
 </p>
 
 ## About me

@@ -6,6 +6,7 @@ const blogSchema = z.object({
     pubDate: z.coerce.date(),
     updatedDate: z.string().optional(),
     heroImage: z.string().optional(),
+    sourceUrl: z.string(),
 });
 export type BlogSchema = z.infer<typeof blogSchema>;
 

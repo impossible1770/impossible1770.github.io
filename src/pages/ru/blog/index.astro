@@ -17,8 +17,8 @@ const posts = (await getCollection('blog'))
                         title={post.data.title}
                         img={post.data.heroImage}
                         desc={post.data.description}
-                        url={"/ru/blog/" + post.slug.slice(3)}
-                        target="_self"
+                        url={post.data.sourceUrl}
+                        target="_blank"
                 />
                 <div class="divider my-0"></div>
         ))

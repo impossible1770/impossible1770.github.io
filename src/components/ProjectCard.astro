@@ -3,7 +3,7 @@ const { name, image, description, stack } = Astro.props;
 ---
 <div class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]">
     <div class="hero-content flex-col md:flex-row">
-      {image && <img src={image} alt={name} class="max-w-full md:max-w-[13rem] rounded-lg" />}
+      {image && <img src={image} alt={""} class="max-w-full md:max-w-[13rem] rounded-lg" />}
       <div class="grow w-full">
         <h1 class="text-xl font-bold">
           {name}

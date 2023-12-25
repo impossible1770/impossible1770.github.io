@@ -17,7 +17,7 @@ const projectSchema = z.object({
     description: z.string(),
     stack: z.array(z.string()),
     image: z.string().optional(),
-    priority: z.int(),
+    priority: z.number(),
 })
 export type ProjectSchema = z.infer<typeof projectSchema>;
 

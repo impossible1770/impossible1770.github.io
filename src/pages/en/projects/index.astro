@@ -11,10 +11,10 @@ const projects = (await getCollection('projects'));
     {
         projects.map((project) => (
                 <ProjectCard
-                        title={project.data.name}
-                        desc={project.data.description}
-                        img={project.data.image}
-                        tags={project.data.stack}
+                        name={project.data.name}
+                        description={project.data.description}
+                        image={project.data.image}
+                        stack={project.data.stack}
                 />
                 <div class="divider my-0"></div>
         ))

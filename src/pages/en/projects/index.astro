@@ -1,9 +1,8 @@
 ---
 import {getCollection} from 'astro:content';
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import i18next from "i18next";
 import ProjectCard from "../../../components/ProjectCard.astro";
-
+import i18next from "i18next";
 i18next.changeLanguage("en");
 
 const projects = (await getCollection('projects'));

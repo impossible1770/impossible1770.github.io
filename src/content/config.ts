@@ -11,10 +11,13 @@ const blogSchema = z.object({
 export type BlogSchema = z.infer<typeof blogSchema>;
 
 const projectSchema = z.object({
-    title: z.string(),
+    name: z.string(),
+    role: z.string(),
+    teamSize: z.string(),
     description: z.string(),
+    stack: z.array(z.string()),
     image: z.string().optional(),
-    link: z.string(),
+    priority: z.int(),
 })
 export type ProjectSchema = z.infer<typeof projectSchema>;
 

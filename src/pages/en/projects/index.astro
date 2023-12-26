@@ -9,7 +9,9 @@ const projects = (await getCollection('projects'));
 ---
 <BaseLayout>
     {
-        projects.map((project) => (
+        projects
+            .sort((a, b) => a.data.priority - b.data.priority)
+            .map((project) => (
                 <ProjectCard
                         name={project.data.name}
                         description={project.data.description}

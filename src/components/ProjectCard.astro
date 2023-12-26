@@ -1,5 +1,5 @@
 ---
-const { name, image, description, stack } = Astro.props;
+const { name, image, description, teamSize, stack } = Astro.props;
 ---
 <div className="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]">
     <div className="grow w-full">
@@ -10,7 +10,7 @@ const { name, image, description, stack } = Astro.props;
             <b>Role:</b> <span className="font-normal">Android Developer</span>.
         </p>
         <p className="mb-2">
-            <b>Team size:</b> <span className="font-normal">20 developers +</span>
+            <b>Team size:</b> <span className="font-normal">{teamSize} developers</span>
         </p>
         <p className="mb-2">
             <b>Description:</b> <span className="font-normal">{description}</span>
@@ -19,4 +19,4 @@ const { name, image, description, stack } = Astro.props;
             {stack && stack.map((tag) => <div class="badge badge-outline">{tag}</div>)}
         </div>
     </div>
-</div>;
+</div>

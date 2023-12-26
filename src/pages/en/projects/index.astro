@@ -15,6 +15,7 @@ const projects = (await getCollection('projects'));
                         description={project.data.description}
                         image={project.data.image}
                         stack={project.data.stack}
+                        teamSize={project.data.teamSize}
                 />
                 <div class="divider my-0"></div>
         ))

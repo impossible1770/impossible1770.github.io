@@ -1,5 +1,5 @@
 ---
-const { name, image, description, teamSize, stack } = Astro.props;
+const { name, role, image, description, teamSize, stack } = Astro.props;
 ---
 <p/>
 <div className="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]">
@@ -8,7 +8,7 @@ const { name, image, description, teamSize, stack } = Astro.props;
             <b>Project name:</b> <span className="font-normal">{name}</span>
         </h1>
         <p className="mb-2">
-            <b>Role:</b> <span className="font-normal">Android Developer</span>.
+            <b>Role:</b> <span className="font-normal">{role}</span>.
         </p>
         <p className="mb-2">
             <b>Team size:</b> <span className="font-normal">{teamSize} developers</span>

@@ -14,6 +14,7 @@ const projects = (await getCollection('projects'));
             .map((project) => (
                 <ProjectCard
                         name={project.data.name}
+                        role={project.data.role}
                         description={project.data.description}
                         image={project.data.image}
                         stack={project.data.stack}

@@ -1,14 +1,24 @@
 ---
 const { name, image, description, stack } = Astro.props;
 ---
-<div class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]">
-      <div class="grow w-full">
-        <h1 class="text-xl font-bold">
-          {name}
+<div className="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]">
+    <div className="grow w-full">
+        <h1 className="text-xl font-bold mb-2">
+            Project name: <span className="font-normal">{name}</span>
         </h1>
-        <p class="py-1 text-1xl">{description}</p>
-        <div class="card-actions justify-start">
-          {stack && stack.map((tag) => <div class="badge badge-outline">{tag}</div>)}
+        <p className="mb-2">
+            Role: <span className="font-normal">Android Developer</span>.
+        </p>
+        <p className="mb-2">
+            Team size: <span className="font-normal">20 developers +</span>
+        </p>
+        <p className="mb-2">
+            Description: <span className="font-normal">{description}</span>
+        </p>
+        <div className="card-actions justify-start">
+            {stack && stack.map((tag, index) => (
+                    <div key={index} className="badge badge-outline">{tag}</div>
+            ))}
         </div>
     </div>
-</div>
+</div>;

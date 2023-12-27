@@ -8,6 +8,10 @@ i18next.changeLanguage("en");
 const projects = (await getCollection('projects'));
 ---
 <BaseLayout>
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">Latest Projects</div>
+    </div>
+
     {
         projects
             .sort((a, b) => a.data.priority - b.data.priority)

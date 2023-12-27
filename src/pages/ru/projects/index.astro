@@ -3,22 +3,30 @@ import {getCollection} from 'astro:content';
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import HorizontalCard from "../../../components/HorizontalCard.astro";
 import i18next from "i18next";
+import ProjectCard from "../../../components/ProjectCard.astro";
 
 i18next.changeLanguage("ru");
 
 const projects = (await getCollection('projects'));
 ---
-<!--<BaseLayout>
+<BaseLayout>
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">Примеры крайних проэктов</div>
+    </div>
+
     {
-        projects.map((project) => (
-                <HorizontalCard
-                        title={project.data.title}
-                        desc={project.data.description}
-                        img={project.data.image}
-                        url={project.data.link}
-                        target="_blank"
-                />
-                <div class="divider my-0"></div>
-        ))
+        projects
+            .sort((a, b) => a.data.priority - b.data.priority)
+            .map((project) => (
+                    <ProjectCard
+                            name={project.data.name}
+                            role={project.data.role}
+                            description={project.data.description}
+                            image={project.data.image}
+                            stack={project.data.stack}
+                            teamSize={project.data.teamSize}
+                    />
+                    <div class="divider my-0"></div>
+            ))
     }
-</BaseLayout>-->
+</BaseLayout>

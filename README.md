@@ -13,8 +13,7 @@
 - I'm a `Android Engineer` with 6 years experience  
 - I have a Bachelor's degree in CYBERSECURITY (<a href="https://nure.ua/en/applicants/specialties-and-specialization/cybersecurity/">NURE</a>)
 - I have worked in many companies(outsourcing, Outstaffing freelance, startup and big corporate)
-- Here is my [CV](/public/TODO.pdf)
-
+\
 ### Social networks
 [![github](public/github.svg)](https://github.com/impossible1770)
 [![linkedin](public/linkedin.svg)](https://www.linkedin.com/in/alexander-h-667533193/)
